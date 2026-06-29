@@ -141,4 +141,13 @@ SELECT * FROM products WHERE name IN ('Pen Red', 'Pen Black');
 SELECT * FROM products WHERE (price BETWEEN 1.0 AND 2.0) AND (quantity BETWEEN 1000 AND 2000);
 ```
 
+```sql
+SELECT productID, name, price + 0.05 AS new_price FROM products;
+
+```
+
+```
+SELECT productID, name, quantity - 500 AS remaining_quantity
+```
+
 ---
