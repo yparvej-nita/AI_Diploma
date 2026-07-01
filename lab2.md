@@ -171,4 +171,9 @@ SELECT * FROM products ORDER BY price LIMIT 2:
 ```
 
 
+### Skip the first two rows and display the next 1 row 
+
+```
+SELECT • FROM products ORDER BY price LIMIT 2, 1;
+```
 
