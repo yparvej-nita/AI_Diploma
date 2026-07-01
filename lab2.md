@@ -151,3 +151,22 @@ SELECT productID, name, quantity - 500 AS remaining_quantity
 ```
 
 ---
+## Lab 3: ORDER BY and GROUP BY
+
+```sql
+SELECT * FROM product NHERE name LIKE 'Pen %' ORDER BY price DESC;
+```
+
+### Order by price in descending order, followed by quantity in ascending (default) order
+
+```
+SELECT * FROM product NHERE name LIKE 'Pen %' ORDER BY price DESC, quantity;
+```
+
+
+### Display the first two rows
+ 
+```
+SELECT * FROM products ORDER BY price LIMIT 2:
+```
+
