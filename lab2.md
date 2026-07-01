@@ -184,3 +184,35 @@ SELECT * FROM products ORDER BY productCode,productID
 ```
 
 
+## Creating a Table
+
+```
+CREATE TABLE Sales (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    salesperson VARCHAR(50),
+    region VARCHAR(50),
+    product VARCHAR(50),
+    sales_amount DECIMAL(10, 2)
+);
+
+INSERT INTO Sales (salesperson, region, product, sales_amount)
+VALUES
+('Alice', 'North', 'Laptop', 500.00),
+('Bob', 'North', 'Phone', 200.00),
+('Alice', 'North', 'Tablet', 300.00),
+('Charlie', 'South', 'Laptop', 700.00),
+('Diana', 'South', 'Phone', 400.00),
+('Bob', 'North', 'Laptop', 300.00),
+('Charlie', 'South', 'Tablet', 300.00);
+
+```
+
+
+### ORDER BY and Sorting
+
+```
+SELECT salesperson, region, product, sales_amount
+FROM Sales
+ORDER BY region ASC, sales_amount DESC;
+<img width="676" height="101" alt="image" src="https://github.com/user-attachments/assets/3d996c08-3fb0-4ac0-a523-241571b5b0ae" />
+```
