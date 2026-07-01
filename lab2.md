@@ -170,3 +170,5 @@ SELECT * FROM product NHERE name LIKE 'Pen %' ORDER BY price DESC, quantity;
 SELECT * FROM products ORDER BY price LIMIT 2:
 ```
 
+
+
