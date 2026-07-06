@@ -1,4 +1,4 @@
-AS Keyword
+## AS Keyword
 
 ```sql
 -- Define aliases to be used as display names
