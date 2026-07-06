@@ -31,3 +31,7 @@ select distinct price,name as 'Distinct price name' from products;
 ```sql
 SELECT COUNT(*) AS 'Count' FROM products;
 ```
+
+```sql
+SELECT productCode, COUNT(*) AS 'Count' FROM products GROUP BY productCode;
+```
