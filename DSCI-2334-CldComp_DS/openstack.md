@@ -8,7 +8,8 @@ OpenStack’s modular framework allows you to identify and deploy components dep
 
 ![]()
 
-![openstack-map-v20260401.png](/Users/yunusparvej/workpackages/PARA/Projects/NITA/LOCAL-GH-REPOS/other-ghrepos/AI_Diploma/DSCI-2334-CldComp_DS/images/openstack-map-v20260401.png)
+![Photo](images/photo.jpg)
+
 
 
 
