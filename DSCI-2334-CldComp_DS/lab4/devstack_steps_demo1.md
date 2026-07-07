@@ -150,3 +150,33 @@ Sources
 [9] Cloud e Datacenter Networking http://wpage.unina.it/rcanonic/didattica/dcn/lucidi/DCN-L09-b-OpenStack-Tour.pdf
 [10] Swift/DevstackSetupForKeystoneV3 https://wiki.openstack.org/wiki/Swift/DevstackSetupForKeystoneV3
 [11] OpenStack-DevStack all-in-one setup for VirtualBox host ... - GitHub https://github.com/BorisDundakov/OpenStack-DevStack
+
+---
+
+# PowerShell Commands to check IP adress
+
+Use `Get-NetIPConfiguration` for the quick view, and `Get-NetIPAddress` if you want the IP details only. For the full subnet mask in dotted format, `ipconfig /all` is still the simplest command in PowerShell.[1][2]
+
+## Useful commands
+```powershell
+Get-NetIPConfiguration
+Get-NetIPAddress
+Get-NetAdapter
+ipconfig /all
+```
+
+## What each one shows
+- `Get-NetIPConfiguration` shows the adapter, IPv4 address, gateway, and DNS settings in a readable format.[2][1]
+- `Get-NetIPAddress` shows assigned IP addresses and prefix length, which is useful for the subnet size.[3][4]
+- `ipconfig /all` shows the classic Windows network details, including subnet mask, default gateway, and DNS servers.[5][2]
+
+## If you want one adapter only
+```powershell
+Get-NetIPConfiguration -InterfaceAlias "Ethernet"
+Get-NetIPAddress -InterfaceAlias "Ethernet"
+ipconfig /all
+```
+
+## For VirtualBox
+If your host adapter name is different, replace `"Ethernet"` with the actual adapter name from `Get-NetAdapter`. That is often the easiest way to identify the host IP you will use for bridging or host-only networking.[1][5]
+
