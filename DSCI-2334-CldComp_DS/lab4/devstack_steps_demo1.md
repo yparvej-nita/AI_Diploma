@@ -10,17 +10,6 @@ Here is the official Ubuntu Server download page for VirtualBox: [Ubuntu Server 
 
 For your DevStack lab, download the **Ubuntu Server 24.04.4 LTS** ISO from that page, then attach the ISO to the VirtualBox VM when creating the machine.
 
-Sources
-[1] Get Ubuntu Server | Download https://ubuntu.com/download/server
-[2] Thank you for downloading Ubuntu Server | Ubuntu https://ubuntu.com/download/server/thank-you?version=24.04.4&architecture=amd64&lts=true
-[3] Ubuntu 24.04.4 (Noble Numbat) https://releases.ubuntu.com/noble
-[4] Ubuntu Server 24.04 LTS on VirtualBox - Complete Setup and networking https://www.youtube.com/watch?v=D4jaJBtHZDQ&time_continue=15&themeRefresh=1
-[5] Ubuntu Server 24.04 LTS in macchina virtuale - VirtualBox 🤩 https://www.youtube.com/watch?v=6Bpxt5r6ydw
-[6] Install Ubuntu Server 24.04 LTS on VirtualBox 7.1.6 - All Issues Solved https://www.youtube.com/watch?v=FbbFP1Z0OZY
-[7] How to Install Ubuntu Server on VirtualBox - James Hibbard https://hibbard.eu/install-ubuntu-virtual-box/
-[8] How to Download and Install Ubuntu Server 24.04.4 LTS on VirtualBox | Complete Beginner Guide https://www.youtube.com/watch?v=FO7DKzZOa30
-[9] How to Install Ubuntu Server 24.04 LTS on VirtualBox| Install Ubuntu Server 24.04 on VirtualBox 2024 https://www.youtube.com/watch?v=r1DCX_VPnM0
-[10] Install Ubuntu Server 24.04 LTS di Virtualbox https://www.youtube.com/watch?v=ED1JLty0dC4
 
 
 ## 1) Host machine setup
