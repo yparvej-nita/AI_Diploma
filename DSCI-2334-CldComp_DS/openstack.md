@@ -6,14 +6,13 @@ OpenStack’s modular framework allows you to identify and deploy components dep
 
 [https://www.openstack.org/openstack-map](https://www.openstack.org/openstack-map)
 
-![]()
-
-![Photo](images/photo.jpg)
 
 
+![Openstack-Map](images/openstack-map-v20260401.png)
 
 
-![](https://www.openstack.org/openstack-map)
+
+
 
 
 
