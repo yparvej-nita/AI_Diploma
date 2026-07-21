@@ -32,9 +32,14 @@ To ensure accurate analysis, you must replace blank values or placeholders (like
 
 ```sql
 -- To replace blank values with NULL
+SET SQL_SAFE_UPDATES = 0;
+
 UPDATE games
 SET `Cost, Billion USD` = NULL
-WHERE `Cost, Billion USD` = ' ' OR `Cost, Billion USD` = '**';
+WHERE TRIM(`Cost, Billion USD`) IN ('', '**');
+
+SET SQL_SAFE_UPDATES = 1;
+
 ```
 ![Update Code Block](sql_update_null_replacement.png)
 
