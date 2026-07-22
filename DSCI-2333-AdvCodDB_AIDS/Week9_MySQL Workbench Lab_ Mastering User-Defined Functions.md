@@ -50,6 +50,7 @@ Start by creating a simple function that adds two integers 1\.
 1. Type the following code into your Query Tab:
 
 ```sql
+USE dd;
 DELIMITER $$
 
 CREATE FUNCTION add_numbers(x INT, y INT)  
@@ -67,7 +68,7 @@ DELIMITER ;
 **Step 2: Use and Verify the Function**To test your function, run a standard SELECT statement 1\. The result will appear in the **Result Grid**:  
 
 ```sql
-SELECT add\_numbers(10, 5\) AS result;  
+SELECT add_numbers(10, 5) AS result;  
 ```
 **Figure 2: Screenshot of MySQL Workbench showing the code for add\_numbers and the Result Grid showing '15'** 1
 
