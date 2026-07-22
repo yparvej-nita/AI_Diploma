@@ -52,11 +52,11 @@ Start by creating a simple function that adds two integers 1\.
 ```sql
 DELIMITER $$
 
-CREATE FUNCTION add\_numbers(x INT, y INT)  
+CREATE FUNCTION add_numbers(x INT, y INT)  
 RETURNS INT  
 DETERMINISTIC  
 BEGIN  
-    RETURN x \+ y;  
+    RETURN x + y;  
 END$$
 
 DELIMITER ;
@@ -65,7 +65,10 @@ DELIMITER ;
 1. Highlight the entire block and click the **Lightning Bolt (Execute)** icon.
 
 **Step 2: Use and Verify the Function**To test your function, run a standard SELECT statement 1\. The result will appear in the **Result Grid**:  
+
+```sql
 SELECT add\_numbers(10, 5\) AS result;  
+```
 **Figure 2: Screenshot of MySQL Workbench showing the code for add\_numbers and the Result Grid showing '15'** 1
 
 #### Task 4: Function Declaration Characteristics
@@ -88,60 +91,71 @@ CREATE FUNCTION convert_temp(Cel decimal(5,2))
 RETURNS decimal(5,2)  
 DETERMINISTIC  
 BEGIN  
-    RETURN (Cel \* 9/5) \+ 32;  
+    RETURN (Cel * 9/5) + 32;  
 END$$
 
 DELIMITER ;
 ```
 
 \-- Test the function in Workbench  
+
 ```sql
 SELECT convert_temp(2.3);  
 ```
+
 **Example 3: Calculate the Square of a Number**  
+
 ```sql
 DELIMITER $$  
 CREATE FUNCTION calculate_square(num INT)   
 RETURNS INT  
 DETERMINISTIC  
 BEGIN  
-    RETURN num \* num;  
+    RETURN num * num;  
 END$$  
 DELIMITER ;
 ```
 
 \-- Test the function  
+
 ```sql
-SELECT calculate\_square(3);  
+SELECT calculate_square(3);  
 ```
+
 **Example 4: Calculate the Cube of a Number**  
+
 ```sql
 DELIMITER $$  
 CREATE FUNCTION calculate_cube(num INT)   
 RETURNS INT  
 DETERMINISTIC  
 BEGIN  
-    RETURN num \* num \* num;  
+    RETURN num * num * num;  
 END$$  
 DELIMITER ;
 ```
 
 \-- Test the function  
+
 ```sql
-SELECT calculate\_cube(3);  
+SELECT calculate_cube(3);  
 ```
+
 **Example 5: Calculate the Perimeter of a Rectangle***Hint: The perimeter of a rectangle is $2 \\times (length \+ width)$* 1\.  
+
 ```sql
 DELIMITER $$  
 CREATE FUNCTION rectangle_perimeter(length DECIMAL(5, 2), width DECIMAL(5, 2))   
 RETURNS DECIMAL(5, 2\)  
 DETERMINISTIC  
 BEGIN  
-    RETURN 2 \* (length \+ width);  
+    RETURN 2 * (length + width);  
 END$$  
 DELIMITER ;
 ```
+
 \-- Test the function  
+
 ```sql
 SELECT rectangle_perimeter(5, 3);
 ```
@@ -152,7 +166,7 @@ SELECT rectangle_perimeter(5, 3);
 
 ```sql
 DELIMITER $$  
-CREATE FUNCTION is\_even(num INT)   
+CREATE FUNCTION is_even(num INT)   
 RETURNS VARCHAR(5)  
 DETERMINISTIC  
 BEGIN  
@@ -162,6 +176,7 @@ DELIMITER ;
 ```
 
 \-- Test the function  
+
 ```sql
 SELECT is_even(4);
 ```
