@@ -108,4 +108,8 @@ Build an ER diagram for a retail database containing three entities: Customers, 
 * **Exporting:** Go to **File \> Export** to download the diagram as a **PNG, JPEG, SVG, or PDF**  
 * **Publishing:** Use the **Publish** option to make the document visible to anyone on the web as a full document or PDF
 
+ ## References
+    How to Use Lucidchart for ER Diagram (Full 2024 Guide)    
+    https://www.youtube.com/watch?v=_Lg1oGW_Nfw
+
 **End of Lab Manual**  
