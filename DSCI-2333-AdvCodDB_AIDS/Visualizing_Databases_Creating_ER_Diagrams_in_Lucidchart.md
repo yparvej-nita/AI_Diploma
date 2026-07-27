@@ -3,7 +3,9 @@
 **Course:** Database Design and Management
 
 **Lab Title:** Visualizing Databases: Creating ER Diagrams in Lucidchart
+
 **Instructor:** Dr. Yunus Parvej Faiband
+
 **Date:** July 2026
 
 ## Lab Overview & Introduction
