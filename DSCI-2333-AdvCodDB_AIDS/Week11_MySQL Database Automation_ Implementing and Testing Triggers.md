@@ -138,3 +138,90 @@ Figure 4: Log table reflecting both insertion and update events
 
 In this lab, you successfully created and tested MySQL triggers to automate database logging. Triggers are powerful tools for ensuring that critical events—such as data additions or modifications—are captured automatically without requiring additional code in the application layer.  
 
+
+----
+
+In MySQL, triggers are **not stored inside the table data itself**; their metadata is stored in MySQL’s system catalog, and you can view it through `INFORMATION_SCHEMA.TRIGGERS` or `SHOW TRIGGERS`. In MySQL Workbench, you usually see them under a specific table’s **Triggers** tab in the schema navigator.[1][2]
+
+## Where to look
+
+- **All triggers in a schema:**  
+  Run `SHOW TRIGGERS;` or `SHOW TRIGGERS FROM your_db;`.[3][1]
+- **Detailed trigger metadata:**  
+  Query `INFORMATION_SCHEMA.TRIGGERS`.[2][1]
+- **Workbench view:**  
+  Expand your schema, then the table, then open **Triggers** for that table.[4][5]
+
+## Useful queries
+
+```sql
+SHOW TRIGGERS;
+```
+
+```sql
+SHOW TRIGGERS FROM your_database;
+```
+
+```sql
+SELECT *
+FROM INFORMATION_SCHEMA.TRIGGERS
+WHERE TRIGGER_SCHEMA = 'your_database';
+```
+
+## If you need the trigger body
+
+Use:
+
+```sql
+SHOW CREATE TRIGGER trigger_name;
+```
+
+That returns the exact `CREATE TRIGGER` statement, including the trigger logic.
+
+----
+
+DROP TRIGGER librarydb.after_book_update;
+
+To remove a trigger in MySQL, use `DROP TRIGGER`. If the trigger belongs to a specific database, include the schema name to avoid ambiguity; `IF EXISTS` is a safe option that prevents an error if the trigger is missing.
+
+## Basic syntax
+
+```sql
+DROP TRIGGER [IF EXISTS] [schema_name.]trigger_name;
+```
+
+Example:
+
+```sql
+DROP TRIGGER IF EXISTS mydb.before_update_customer;
+```
+
+This deletes the trigger from the database, and if you drop the table the trigger belongs to, MySQL also removes its triggers automatically.[2][3]
+
+## In MySQL Workbench
+
+1. Open your schema.
+2. Expand the table that owns the trigger.
+3. Right-click the trigger and choose drop/delete, or run the `DROP TRIGGER` SQL in the query editor.  
+4. Refresh the schema to confirm it is gone.
+
+## About “update” triggers
+
+If you mean an `UPDATE` trigger, that is just a trigger that fires on `UPDATE` events. You do **not** update the trigger with `UPDATE`; you either **drop and recreate it** with a new definition, or use `SHOW CREATE TRIGGER` to copy the old version and edit it.[3][2]
+
+## Verify before removing
+
+Use this to list triggers first:
+
+```sql
+SHOW TRIGGERS;
+```
+
+Or inspect the exact definition:
+
+```sql
+SHOW CREATE TRIGGER trigger_name;
+```
+
+That helps you confirm the trigger name and the table it is attached to before you remove it.[6][1]
+
