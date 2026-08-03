@@ -8,16 +8,16 @@
 
 ### Lab Overview
 
-This lab session provides a comprehensive introduction to database triggers within a MySQL environment 3\. Students will explore how triggers can be used to automate specific actions that occur before or after data changes 3\. By implementing triggers on events such as **INSERT**, **UPDATE**, or **DELETE**, you will learn how to enhance database integrity and maintain automated logs of database activities 3\.
+This lab session provides a comprehensive introduction to database triggers within a MySQL environment. Students will explore how triggers can be used to automate specific actions that occur before or after data changes. By implementing triggers on events such as **INSERT**, **UPDATE**, or **DELETE**, you will learn how to enhance database integrity and maintain automated logs of database activities .
 
 ### Learning Objectives
 
 By the end of this lab, you will be able to:
 
-* Understand the fundamental concept and general syntax of MySQL triggers 3, 4\.  
-* Create triggers to automate database actions based on data events 3\.  
-* Utilize triggers to enhance data integrity and create audit logs 3, 5\.  
-* Test and analyze trigger behavior using practical scenarios 6, 7\.
+* Understand the fundamental concept and general syntax of MySQL triggers.  
+* Create triggers to automate database actions based on data events.  
+* Utilize triggers to enhance data integrity and create audit logs.  
+* Test and analyze trigger behavior using practical scenarios.
 
 ### Prerequisites
 
@@ -41,18 +41,18 @@ Figure 1: General flow and syntax for MySQL Triggers
 
 #### Step 1: Database and Environment Setup
 
-The goal of this specific lab exercise is to create a trigger that automatically logs an entry in a separate table whenever a new book is added to a library database 5\. First, create and select the working database:  
+The goal of this specific lab exercise is to create a trigger that automatically logs an entry in a separate table whenever a new book is added to a library database . First, create and select the working database:  
 CREATE DATABASE librarydb;  
 USE librarydb;  
 5
 
 #### Step 2: Create the books Table
 
-This table will store the primary information about the books in the library 5\.
+This table will store the primary information about the books in the library.
 
-* book\_id: A unique identifier for each book (Primary Key, Auto-Increment) 5\.  
-* book\_title: The title of the book 5\.  
-* author: The author of the book 5\.
+* book\_id: A unique identifier for each book (Primary Key, Auto-Increment).  
+* book\_title: The title of the book.  
+* author: The author of the book.
 
 CREATE TABLE books (  
     book\_id INT AUTO\_INCREMENT PRIMARY KEY,  
@@ -63,11 +63,11 @@ CREATE TABLE books (
 
 #### Step 3: Create the book\_logs Table
 
-This table will act as an audit trail, storing logs of when new books are added 8\.
+This table will act as an audit trail, storing logs of when new books are added.
 
-* log\_id: A unique identifier for each log entry 8\.  
-* message: A text description containing information about the added book 8\.  
-* created\_at: A timestamp capturing exactly when the log was generated 8\.
+* log\_id: A unique identifier for each log entry.  
+* message: A text description containing information about the added book.  
+* created\_at: A timestamp capturing exactly when the log was generated.
 
 CREATE TABLE book\_logs (  
     log\_id INT AUTO\_INCREMENT PRIMARY KEY,  
@@ -79,7 +79,7 @@ Figure 2: Empty Result Grids for books and book\_logs tables
 
 ### 3\. Creating the INSERT Trigger
 
-Now, we will define the trigger after\_book\_insert 10\. This trigger is set to fire **AFTER** a new row is successfully **INSERTED** into the books table 10\. It will concatenate the book details into a message and insert it into the book\_logs table 10\.  
+Now, we will define the trigger after\_book\_insert 10\. This trigger is set to fire **AFTER** a new row is successfully **INSERTED** into the books table. It will concatenate the book details into a message and insert it into the book\_logs table.  
 DELIMITER $$
 
 CREATE TRIGGER after\_book\_insert  
@@ -91,22 +91,21 @@ BEGIN
 END$$
 
 DELIMITER ;  
-10, 11
 
 ### 4\. Testing and Analyzing the Trigger
 
 #### Task 1: Test the INSERT Trigger
 
-To verify the trigger is working, insert a record into the books table and check the book\_logs table for an automatic entry 6\.  
+To verify the trigger is working, insert a record into the books table and check the book\_logs table for an automatic entry.  
 INSERT INTO books (book\_title, author)  
 VALUES ('The Great Gatsby', 'F. Scott Fitzgerald');  
 6  
-**Expected Result:**The books table should show the new record, and the book\_logs table should automatically contain a message confirming the addition 6, 12\.  
+**Expected Result:**The books table should show the new record, and the book\_logs table should automatically contain a message confirming the addition.  
 Figure 3: Automatic log generation after inserting a book
 
 #### Task 2: Implement and Test an UPDATE Trigger
 
-This trigger logs a message whenever an existing book's details (such as title or author) are modified 13\.  
+This trigger logs a message whenever an existing book's details (such as title or author) are modified.  
 DELIMITER $$
 
 CREATE TRIGGER after\_book\_update  
@@ -121,22 +120,21 @@ DELIMITER ;
 13  
 **Activity:**
 
-1. Insert a dummy record (e.g., Book Title: "dd", Author: "ddd") 7\.  
-2. Update that record (e.g., Change title "dd" to "dddd") 7\.  
-3. Query the book\_logs table to confirm that both the initial insertion and the subsequent update were logged 7\.
+1. Insert a dummy record (e.g., Book Title: "dd", Author: "ddd") .  
+2. Update that record (e.g., Change title "dd" to "dddd") .  
+3. Query the book\_logs table to confirm that both the initial insertion and the subsequent update were logged .
 
 Figure 4: Log table reflecting both insertion and update events
 
 ### Key Concepts and Technical Glossary
 
-* **OLD**: Used within a trigger to reference values of a record *before* a DELETE or UPDATE operation 11\.  
-* **NEW**: Used to reference the values of a record *after* an INSERT or UPDATE operation 11\.  
-* **CONCAT()**: A SQL function used to join multiple strings together into one 11\.  
-* **NOW()**: A function that returns the current timestamp when the database operation occurs 11\.  
-* **VALUES**: Specifies the data to be inserted into a table's columns 11\.
+* **OLD**: Used within a trigger to reference values of a record *before* a DELETE or UPDATE Operations.  
+* **NEW**: Used to reference the values of a record *after* an INSERT or UPDATE operation.  
+* **CONCAT()**: A SQL function used to join multiple strings together into one.  
+* **NOW()**: A function that returns the current timestamp when the database operation occurs.  
+* **VALUES**: Specifies the data to be inserted into a table's columns.
 
 ### Conclusion
 
-In this lab, you successfully created and tested MySQL triggers to automate database logging 3, 7\. Triggers are powerful tools for ensuring that critical events—such as data additions or modifications—are captured automatically without requiring additional code in the application layer 3\.  
-NITA Footer Logo  
-**Thank You \- National Information Technology Academy** 15  
+In this lab, you successfully created and tested MySQL triggers to automate database logging. Triggers are powerful tools for ensuring that critical events—such as data additions or modifications—are captured automatically without requiring additional code in the application layer.  
+
