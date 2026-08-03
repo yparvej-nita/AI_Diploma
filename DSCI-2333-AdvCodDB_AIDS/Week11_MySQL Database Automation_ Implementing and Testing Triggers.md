@@ -26,7 +26,7 @@ By the end of this lab, you will be able to:
 
 ### 1\. Understanding Trigger Syntax
 
-A trigger is a named database object that is associated with a table and activates when a particular event occurs for that table 4\.  
+A trigger is a named database object that is associated with a table and activates when a particular event occurs for that table.  
 **General Flow for Creating a Trigger:**  
 CREATE TRIGGER TriggerName  
 (AFTER | BEFORE) (INSERT | UPDATE | DELETE)  
