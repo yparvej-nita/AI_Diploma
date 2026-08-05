@@ -37,9 +37,8 @@ In MySQL, **BEFORE triggers** are used to execute logic *before* a change is app
 First, create a new database and a sample table to store employee information  
 
 ```sql
-
-```
-
+CREATE DATABASE CompanyDB;  
+USE CompanyDB;
 CREATE TABLE Employees (  
     EmployeeID INT AUTO\_INCREMENT PRIMARY KEY,  
     Name VARCHAR(100) NOT NULL,  
