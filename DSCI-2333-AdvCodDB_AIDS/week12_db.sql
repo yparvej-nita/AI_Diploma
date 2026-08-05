@@ -188,6 +188,16 @@ DELIMITER ;
 -- Add initial data  
 INSERT INTO users (username, email) VALUES ('Alice', 'alice@example.com'), ('Bob', 'bob@example.com');
 
+INSERT INTO products (product_name, price)
+VALUES
+('Laptop', 3500),
+('Mouse', 100);
+
+INSERT INTO orders (user_id, product_id)
+VALUES
+(1, 1),
+(2, 2);
+
 -- Delete an order to test cancellation logging  
 DELETE FROM orders WHERE order_id= 2;
 
