@@ -100,7 +100,7 @@ Resources:
 
 1. Log in to the AWS Console and search for **CloudFormation**.  
 2. Click **Create stack** \-\> **With new resources (standard)**.  
-3. Select **Upload a template file** and provide the setup-code.txt file.  
+3. Select **Upload a template file** and provide the [setup-code.yml](setup-code.yml) file.
 4. Name the stack myGlueStack and enter a unique **S3 Bucket name**.  
 5. Click **Next** through the options, acknowledge the IAM capabilities, and click **Submit**.  
 6. Wait for the status to show **CREATE\_COMPLETE**.
