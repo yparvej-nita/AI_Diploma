@@ -1,8 +1,9 @@
 Description:  This template deploys a se bucket and creates a Glue IAM service role of the AWS Glue Course 
 Parameters:
-  S3BucketForCourse: 
+  S3BucketForCourse:
     Description: Please enter the name for your S3 bucket. This will used throughout the "course" and must be unique globablly within AWS. 
     Type: String 
+    Default: yunusrf-bucket-for-course-2026
 
 Resources:
   S3BucketForAWSGlueCourse:

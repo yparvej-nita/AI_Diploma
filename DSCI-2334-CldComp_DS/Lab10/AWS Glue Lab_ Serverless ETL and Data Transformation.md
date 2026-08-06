@@ -192,3 +192,6 @@ This lab demonstrated a complete serverless ETL pipeline. By using AWS Glue, you
 6. Explain the benefit of using an IAM Role for an AWS Glue Job.  
 7. What does "serverless" mean in the context of AWS Glue?
 
+## 11\. Resources
+
+Specify template  Info This GitHub repository (https://github.com/aws-cloudformation/aws-cloudformation-templates) contains sample CloudFormation templates that can help you get started on new infrastructure projects.
