@@ -460,7 +460,7 @@ In this lab, you successfully transformed a raw COVID-19 tracking dataset into a
 
 ## 11. Review Questions
 
-### Student Review Questions (with Answers)
+### Review Questions (with Answers)
 
 #### Q1: What is the difference between an AWS Glue DataBrew "Profile Job" and a "Recipe Job"?
 * **Answer:** A **Profile Job** is a diagnostic tool that scans the raw dataset to generate a detailed Data Quality report (summarizing row/column count, null rates, correlations, and outliers) without modifying the data. A **Recipe Job** is an execution pipeline that applies your published, step-by-step transformations (the recipe) to the entire dataset, generating clean, formatted output files at a target S3 location.
