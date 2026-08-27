@@ -134,7 +134,7 @@ AWS Glue DataBrew is serverless and operates under a **pay-as-you-go** model, ch
 In this first session, you will establish connection to the target dataset, explore its basic layout, configure an IAM role, and execute an automated profiling job to generate a full Data Quality analysis report.
 
 ### 5.1 Step 1: Initiate the Project and Connect S3 Dataset
-1. Log in to the **AWS Management Console** and search for **AWS Glue DataBrew** in the top services search bar. Select it to open the console.
+1. Log in to the **AWS Management Console** and search for **AWS Glue DataBrew** in the top services search bar. Select it to open the console. (Make sure 2 buckets are created : An S3 bucket: `name-bucket-for-databrew`. An S3 output bucket: `databrew-lab-databrewoutputs3bucket-xxxxx`)
 2. Click the orange **Create project** button on the landing page.
 3. In the **Project details** panel, enter a descriptive project name:
  * **Project name:** `covid-data-analysis`
