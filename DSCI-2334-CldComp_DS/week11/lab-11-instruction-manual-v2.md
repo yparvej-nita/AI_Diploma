@@ -64,6 +64,7 @@ To successfully complete this lab, you must have:
 2. **Prior Cloud Lab Foundation:** Successful completion of S3 and IAM fundamentals (similar to the S3 bucket creation and permissions concepts of Lab 8 and 9).
 3. **Dataset Availability:** Access to the COVID-19 Daily States Tracking CSV file (`states_daily.csv`) provided within your class resources.
 4. **Environment Deployment:** Your AWS lab environment must be pre-configured with a CloudFormation stack (typically named `databrew-lab` or similar) that outputs:
+ - An S3 bucket: `name-bucket-for-databrew`.
  - An S3 output bucket: `databrew-lab-databrewoutputs3bucket-xxxxx`.
  - A pre-configured IAM Service Role: `databrew-lab-DataBrewLabRole-xxxxx`.
 
