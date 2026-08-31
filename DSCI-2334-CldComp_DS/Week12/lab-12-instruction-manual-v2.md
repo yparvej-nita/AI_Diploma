@@ -58,7 +58,7 @@ To successfully complete this lab, you must have:
 1. **AWS Console Access:** An active AWS Management Console session with permissions to use SageMaker, IAM, S3, and CloudWatch.
 2. **Prior Cloud Foundations:** Successful completion of S3 and IAM service role concepts (established in Lab 8, 9, 10, and 11).
 3. **University Admissions Dataset:** The graduate admissions CSV dataset file (`Admission_Predict_Ver1.1.csv`) downloaded and ready on your local workstation.
-**Resource Download Link:** [Graduate Admissions Dataset](./Graduate_Admissions_Dataset.csv)
+**Resource Download Link:** [Graduate Admissions Dataset](./DSCI-2334-CldComp_DS/week11/states_daily.csv)
 
 
 ---
