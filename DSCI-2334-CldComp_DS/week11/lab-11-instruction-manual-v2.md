@@ -64,6 +64,7 @@ To successfully complete this lab, you must have:
 2. **Prior Cloud Lab Foundation:** Successful completion of S3 and IAM fundamentals (similar to the S3 bucket creation and permissions concepts of Lab 8 and 9).
 3. **Dataset Availability:** Access to the COVID-19 Daily States Tracking CSV file (`states_daily.csv`) provided within your class resources.
 4. **Environment Deployment:** Your AWS lab environment must be pre-configured with a CloudFormation stack (typically named `databrew-lab` or similar) that outputs:
+ - An S3 bucket: `name-bucket-for-databrew`.
  - An S3 output bucket: `databrew-lab-databrewoutputs3bucket-xxxxx`.
  - A pre-configured IAM Service Role: `databrew-lab-DataBrewLabRole-xxxxx`.
 
@@ -133,7 +134,7 @@ AWS Glue DataBrew is serverless and operates under a **pay-as-you-go** model, ch
 In this first session, you will establish connection to the target dataset, explore its basic layout, configure an IAM role, and execute an automated profiling job to generate a full Data Quality analysis report.
 
 ### 5.1 Step 1: Initiate the Project and Connect S3 Dataset
-1. Log in to the **AWS Management Console** and search for **AWS Glue DataBrew** in the top services search bar. Select it to open the console.
+1. Log in to the **AWS Management Console** and search for **AWS Glue DataBrew** in the top services search bar. Select it to open the console. (Make sure 2 buckets are created : An S3 bucket: `name-bucket-for-databrew`. An S3 output bucket: `databrew-lab-databrewoutputs3bucket-xxxxx`)
 2. Click the orange **Create project** button on the landing page.
 3. In the **Project details** panel, enter a descriptive project name:
  * **Project name:** `covid-data-analysis`
@@ -459,7 +460,7 @@ In this lab, you successfully transformed a raw COVID-19 tracking dataset into a
 
 ## 11. Review Questions
 
-### Student Review Questions (with Answers)
+### Review Questions (with Answers)
 
 #### Q1: What is the difference between an AWS Glue DataBrew "Profile Job" and a "Recipe Job"?
 * **Answer:** A **Profile Job** is a diagnostic tool that scans the raw dataset to generate a detailed Data Quality report (summarizing row/column count, null rates, correlations, and outliers) without modifying the data. A **Recipe Job** is an execution pipeline that applies your published, step-by-step transformations (the recipe) to the entire dataset, generating clean, formatted output files at a target S3 location.
