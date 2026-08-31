@@ -149,7 +149,7 @@ An active **SageMaker Domain** is a prerequisite for running any user profiles o
 
 #### Step 4: Download and Review the Admission Dataset
 1. Download the graduate admission dataset from the provided class link:
- * **Dataset Link:** [Graduate Admission Prediction Dataset](https://drive.google.com/file/d/1si6MSBRIeQkLzLyXc3vsWJaLQL38wF7Z/view?usp=sharing)
+ * **Dataset Link:** [Graduate Admission Prediction Dataset](/DSCI-2334-CldComp_DS/Week12/Admission_Predict_Ver1.1.csv)
 2. Save the tabular file locally on your workstation as `Admission_Predict_Ver1.1.csv`.
 3. Review the dataset structure. The file is a tabular CSV containing **9 columns** and **500 rows**:
  * **Serial No.:** An arbitrary unique record index.
